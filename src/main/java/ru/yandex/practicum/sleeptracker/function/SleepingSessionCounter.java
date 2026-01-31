@@ -13,6 +13,6 @@ public class SleepingSessionCounter implements Function<List<SleepingSession>, S
     @Override
     public SleepAnalysisResult apply(List<SleepingSession> sleepingSessions) {
         Integer quantity = sleepingSessions.size();
-        return new SleepAnalysisResult(TITLE ,quantity);
+        return new SleepAnalysisResult(TITLE, quantity);
     }
 }
