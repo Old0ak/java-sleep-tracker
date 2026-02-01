@@ -17,12 +17,11 @@ public class AverageSleepingSession implements Function<List<SleepingSession>, S
             return new SleepAnalysisResult(TITLE, 0.0);
         }
 
-        long allDurationInMinutes = sleepingSessions.stream()
+        double averageDurationInMinutes = sleepingSessions.stream()
                 .mapToLong(session ->
                         Duration.between(session.getStart(), session.getFinish()).toMinutes())
-                .sum();
-
-        double averageDurationInMinutes = (double) allDurationInMinutes / sleepingSessions.size();
+                .average()
+                .orElse(0);
 
         return new SleepAnalysisResult(TITLE, averageDurationInMinutes);
     }
