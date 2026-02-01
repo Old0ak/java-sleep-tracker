@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 public class ChronotypeDetermination implements Function<List<SleepingSession>, SleepAnalysisResult> {
 
-    public static final String TITLE = "Ваш хронотип";
+    private static final String TITLE = "Ваш хронотип";
 
     @Override
     public SleepAnalysisResult apply(List<SleepingSession> sessions) {

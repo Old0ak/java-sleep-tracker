@@ -9,7 +9,7 @@ import java.util.function.Function;
 
 public class BadSleepingSessionCounter implements Function<List<SleepingSession>, SleepAnalysisResult> {
 
-    public static final String TITLE = "Количество сессий с плохим качество сна";
+    private static final String TITLE = "Количество сессий с плохим качество сна";
 
     @Override
     public SleepAnalysisResult apply(List<SleepingSession> sleepingSessions) {
