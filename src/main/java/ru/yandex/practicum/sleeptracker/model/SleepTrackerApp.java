@@ -65,8 +65,7 @@ public class SleepTrackerApp {
     private static List<SleepingSession> readFile(File file) {
         List<SleepingSession> sessions = new ArrayList<>();
 
-        try (FileReader fileReader = new FileReader(file, StandardCharsets.UTF_8);
-             BufferedReader reader = new BufferedReader(fileReader)) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(file, StandardCharsets.UTF_8))) {
             sessions = reader.lines()
                     .map(SleepTrackerApp::parseLine)
                     .filter(Optional::isPresent)
