@@ -5,9 +5,9 @@ import java.util.Objects;
 
 public class SleepingSession {
 
-    private LocalDateTime start;
-    private LocalDateTime finish;
-    private SleepQuality quality;
+    private final LocalDateTime start;
+    private final LocalDateTime finish;
+    private final SleepQuality quality;
 
     public SleepingSession(LocalDateTime start, LocalDateTime finish, SleepQuality quality) {
         this.start = start;
